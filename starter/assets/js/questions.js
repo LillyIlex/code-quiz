@@ -1,86 +1,89 @@
+// vars
+
 //questions
 
 // target html with query selectors
 var questionBox = document.querySelector("#question-box")
 var question = document.querySelector("#question-title")
 var answers = document.querySelector("#choices")
-var answerBtn = document.querySelector(".answer-btn") 
-
+var answerButton = document.querySelector(".answer-btn")
+var answer1 = document.getElementById("answer1")
+var answer2 = document.getElementById("answer2")
+var answer3 = document.getElementById("answer3")
+var answer4 = document.getElementById("answer4")
 //array of objects
 var questions = [
     {
         question: 'What does HTML stand for?',
-        answers: [
-            { answerBtn: 'Hyper Text Markup Link', correct: false },
-            { answerBtn: 'Hyper Text Markup Lion', correct: false },
-            { answerBtn: 'Hyper Text Markup Language', correct: true },
-            { answerBtn: 'Hyper Text Markup Losers', correct: false },
-        ]
+        a: 'Hyper Text Markup Link',
+        b: 'Hyper Text Markup Lion',
+        c: 'Hyper Text Markup Language',
+        d: 'Hyper Text Markup Losers',
+        correct: 'c'
+
     },
     {
         question: 'Where do we create our repo`s?',
         answers: [
-            { answerBtn: 'GitPub', correct: false },
-            { answerBtn: 'GitHun', correct: false },
-            { answerBtn: 'GitHub', correct: true },
-            { answerBtn: 'Gitify', correct: false },
+            { answerOption: 'GitPub', correct: false },
+            { answerOption: 'GitHun', correct: false },
+            { answerOption: 'GitHub', correct: true },
+            { answerOption: 'Gitify', correct: false },
         ]
     },
     {
 
         question: 'Where in the HTML would you insert the JavaScript link?',
         answers: [
-            { answerBtn: 'Head', correct: false },
-            { answerBtn: 'Body', correct: true },
-            { answerBtn: 'Header', correct: false },
-            { answerBtn: 'Footer', correct: false },
+            { answerOption: 'Head', correct: false },
+            { answerOption: 'Body', correct: true },
+            { answerOption: 'Header', correct: false },
+            { answerOption: 'Footer', correct: false },
         ]
     },
     {
         question: 'A `title` in a HTML doc...',
         answers: [
-            { answer1: 'Names the page and displays in the web browser tab', correct: true },
-            { answer2: 'Gives your HTML file a new name locally', correct: false },
-            { answer3: 'Creates a visible heading on your web app', correct: false },
-            { answer4: 'Doesn`t exist', correct: false },
+            { answerOption: 'Names the page and displays in the web browser tab', correct: true },
+            { answerOption: 'Gives your HTML file a new name locally', correct: false },
+            { answerOption: 'Creates a visible heading on your web app', correct: false },
+            { answerOption: 'Doesn`t exist', correct: false },
         ]
     }, {
 
         question: 'Which is the correct function to get a radomised number?',
         answers: [
-            { answer1: 'Math.floor()', correct: false },
-            { answer2: 'math.rand', correct: false },
-            { answer3: 'Math.ceil()', correct: false },
-            { answer4: 'Math.random()', correct: true },
+            { answerOption: 'Math.floor()', correct: false },
+            { answerOption: 'math.rand', correct: false },
+            { answerOption: 'Math.ceil()', correct: false },
+            { answerOption: 'Math.random()', correct: true },
         ],
     }, {
 
         question: 'What do we use CSS for?',
         answers: [
-            { answer1: 'To add styling', correct: true },
-            { nswer2: 'To add text', correct: false },
-            { nswer3: 'To add forms', correct: false },
-            { answer4: 'To add games', correct: false }
+            { answerOption: 'To add styling', correct: true },
+            { answerOption: 'To add text', correct: false },
+            { answerOption: 'To add forms', correct: false },
+            { answerOption: 'To add games', correct: false }
         ],
     }, {
 
-        question: '`var`, `const` and `let` are all what?',
+        question: '`var` and `let` are both what?',
         answers: [
-            { answer1: 'Methods', correct: false },
-            { answer2: 'Functions', correct: false },
-            { answer3: 'Objects', correct: false },
-            { answer4: 'Variables', correct: true }
+            { answerOption: 'Methods', correct: false },
+            { answerOption: 'Functions', correct: false },
+            { answerOption: 'Objects', correct: false },
+            { answerOption: 'Variables', correct: true }
         ],
     }, {
 
         question: 'What best describes how the DOM sees a web-page?',
         answers: [
-            { answer1: 'Branch', correct: false },
-            { answer2: 'Tree', correct: true },
-            { answer3: 'Flower', correct: false },
-            { answer4: 'Bush', correct: false }
+            { answerOption: 'Branch', correct: false },
+            { answerOption: 'Tree', correct: true },
+            { answerOption: 'Flower', correct: false },
+            { answerOption: 'Bush', correct: false }
         ]
     }
-]
-
-
+] 
